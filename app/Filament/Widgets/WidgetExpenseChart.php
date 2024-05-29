@@ -28,7 +28,7 @@ class WidgetExpenseChart extends ChartWidget
 
         $data = Trend::query(Transaction::expenses())
             ->between(
-                start: $startDate,
+                start: $startDate??now(),
                 end: $endDate,
             )
             ->perDay()

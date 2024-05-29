@@ -28,7 +28,7 @@ class WidgetAIncomeChart extends ChartWidget
 
         $data = Trend::query(Transaction::incomes())
             ->between(
-                start: $startDate,
+                start: $startDate??now(),
                 end: $endDate,
             )
             ->perDay()
