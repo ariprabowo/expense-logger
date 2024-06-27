@@ -32,7 +32,7 @@ class TransactionResource extends Resource
                     ->searchable()
                     ->preload()
                     ->required(),
-                Forms\Components\DatePicker::make('date')
+                Forms\Components\DatePicker::make('date_transaction')
                     ->required(),
                 Forms\Components\TextInput::make('amount')
                     ->required()
